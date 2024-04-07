@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shining Star</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: rgb(13, 21, 40);
+            text-align: center;
+            align-items: center;
+            color:white;
+            padding: 30px; /* Optional padding to provide space between content and border */
+        }
+
+        h1, h3 {
+            color: white;
+        }
+
+        .horizontal-line {
+            width: 100%;
+            height: 3px; /* Adjust the height of the line */
+            background-color: white; /* Change the color of the line */
+            margin-top: 40px; /* Adjust the margin from the top */
+            margin-bottom: 40px; /* Adjust the margin from the bottom */
+        }
+        button {
+            background-color: #e9c1ee; 
+            border: none;
+            color: pink;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 8px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect */
+        button:hover {
+            background-color: #ad1aa3; /* Darker green */
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1 style="text-align: center; font-size: 45px; color:rgb(160, 212, 255)">Shining Star</h1>
+    <br>
+
+    <button><a href="https://github.com/meghanguo/shining_star">Github</a></button>
+    <button><a href="about.html">About Shining Star</a></button>
+    <button><a href="data.html">Data</a></button>
+    <button><a href="install.html">Install and Run</a></button>
+    <button><a href="comments.html">Comments</a></button>
+    <button><a href="optimizations.html">Optimizations</a></button>
+
+    <div class="horizontal-line"></div>
+
+    <body>
+    <h2 style="text-align: center; font-size: 30px; color:rgb(198, 237, 255)">About</h2>
+    <p style = "margin-left: 100px;">This application visualizes stars from the <a href="https://github.com/astronexus/ATHYG-Database">ATHYG database</a>. Users can travel through space and see various constellations from different cultures. Thie application was developed for CS 528 at University of Illinois at Chicago in Spring 2024. Application was built on Unity 2019.2 for CAVE2.</p>
+
+    <br>
+    <h2 style="text-align: center; font-size: 30px; color:rgb(198, 237, 255)">Features</h2>
+
+    <div style="width: 90%;">
+        <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">Menu</h3>
+        <div style="float: left; margin-left: 100px;">
+            <img src="menu.png" alt="Menu Image" style="width: 200px; height: auto;">
+        </div>
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">Press the menu button on the CAVE2 wand to bring up the main menu of the application. From there, access and apply the various features of the application.</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
+    <div style="width: 90%;">
+        <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">Navigation</h3>
+        <div style="float: left; margin-left: 100px;">
+            <img src="navigation.png" alt="Navigation Image" style="width: 200px; height: auto;">
+        </div>
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">The default navigation of this application is freefly. To select a different navigation mode, go to Main Menu -> System -> Navigation Mode. Walk mode is not recommended.</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
+    <div style="width: 90%;">
+        <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">Select Culture for Constellations</h3>
+        <div style="float: left; margin-left: 100px;">
+            <img src="cultures.png" alt="Cultures Image" style="width: 200px; height: auto;">
+        </div>
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">The default constellations shown are modern constellations. To view constellations of a different culture, go to Main Menu -> Constellations and select the constellations to view.</p>
+            <br>
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">To view no constellations and only see the stars, select Main Menu -> Constellations -> No constellations</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
+    <div style="width: 90%;">
+        <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">View Constellation Information</h3>
+        <div style="float: left; margin-left: 100px;">
+            <img src="constellation.png" alt="Constellation Detail Image" style="width: 400px; height: auto;">
+        </div>
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">To view information about one of the constellations displayed, go to Main Menu -> Constellations Details.</p>
+            <br>
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">Constellations must be displayed to see information. If no constellations are displayed, the user will be informed to display constellations in order to display constellation information.</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
+    <div style="width: 90%;">
+        <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">View Exoplanets</h3>
+        <div style="float: left; margin-left: 100px;">
+            <img src="exoplanet.png" alt="Exoplanets Selection Image" style="width: 200px; height: auto;">
+        </div>
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">To re-color the stars from OBAFGKM to color scheme based on the number of known planets in the system, go to Main Menu -> Exoplanets Mode. The user can choose between OBAFGKM and exoplanet color schemes here.</p>
+            <br>
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">To see information explaining the color scheme of the exoplanets, go to Main Menu -> Exoplanets Mode -> Exoplanet Color Scheme Information.</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
+    <div style="width: 90%;">
+        <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">View Changes Over Time</h3>
+        <div style="float: left; margin-left: 100px;">
+            <img src="time.png" alt="Time Selection Image" style="width: 200px; height: auto;">
+        </div>
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">To see the stars and constellations move throughout time, go to Main Menu -> Evolution Over Time. The user can choose to go forward or backward in time here. Movement of the stars and constellations can also be stopped within this menu.</p>
+            <br>
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">The amount of time passed is visible toward center bottom of the screen.</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
+    <div style="width: 90%;">
+        <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">Change Scaling</h3>
+        <div style="float: left; margin-left: 100px;">
+            <img src="scaling.png" alt="Scaling Selection Image" style="width: 200px; height: auto;">
+        </div>
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">To change the scaling of distance between the stars, go to Main Menu -> Change scaling.</p>
+            <br>
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">Default scaling of the application is 1.0x.</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
+    <div style="width: 90%;">
+        <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">Reset Application to Beginning</h3>
+        <div style="float: left; margin-left: 100px;">
+            <img src="reset.png" alt="Reset Image" style="width: 200px; height: auto;">
+        </div>
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 30px; margin-top: 10px;">To reset the application to the location and time when the application first starts, go to Main Menu -> Reset Location and Time.</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
+    </body>
+</body>
+
+</html>
+
