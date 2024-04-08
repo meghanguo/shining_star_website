@@ -31,7 +31,7 @@
         button {
             background-color: #e9c1ee; 
             border: none;
-            color: pink;
+            color: rgb(13, 21, 40);
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -54,25 +54,57 @@
     <h1 style="text-align: center; font-size: 45px; color:rgb(160, 212, 255)">Shining Star</h1>
     <br>
 
-    <button><a href="https://github.com/meghanguo/shining_star">Github</a></button>
-    <button><a href="about.html">About Shining Star</a></button>
-    <button><a href="data.html">Data</a></button>
-    <button><a href="install.html">Install and Run</a></button>
-    <button><a href="comments.html">Comments</a></button>
-    <button><a href="optimizations.html">Optimizations</a></button>
+    <a href="index.html"><button>About Shining Star</button></a>
+    <a href="data.html"><button>Data</button></a>
+    <a href="install.html"><button>Install and Run</button></a>
+    <a href="comments.html"><button>Comments</button></a>
+    <a href="optimizations.html"><button>Optimizations</button></a>
 
     <div class="horizontal-line"></div>
 
     <body>
     <br>
     <h2 style="text-align: center; font-size: 30px; color:rgb(198, 237, 255)">Star Data</h2>
-    <h3 style="text-align: left; font-size: 24px; margin-left: 100px; color:rgb(154, 228, 222)">Data Source</h3>
+    <div style="width: 90%;">
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"><strong>Data Source</strong>: <a href="https://github.com/astronexus/ATHYG-Database" style="color: pink;">ATHYG database</a> Only the "athyg_31_reduced_m10" dataset was used for this application.</p>
+            <br>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> <strong>PreProcessing</strong>:</p>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 1. Keep only the following columns: HIP, DIST, X0, Y0, Z0, ABSMAG, MAG, VX, VY, VZ, SPECT</p>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 2. Remove all rows without X0, Y0, Z0 data</p>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 3. For all remaining rows, update SPECT to keep only the first letter of SPECT value</p>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 4. Convert VX, VY, VZ from km per second to parsec per year by dividing existing VX, VY, VZ values by 31.5 (since each meter in CAVE2 maps to 1 parsec)</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
 
     <br>
     <h2 style="text-align: center; font-size: 30px; color:rgb(198, 237, 255)">Constellation Data</h2>
+    <div style="width: 90%;">
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"><strong>Data Source</strong>: <a href="https://github.com/Stellarium/stellarium/tree/master/skycultures" style="color: pink;">Stellarium Skycultures database</a> Used each constellationship.fab for the following cultures: modern, hawaiian, navajo, samoan, egyptian.</p>
+            <br>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> <strong>PreProcessing</strong>:</p>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 1. Remove all extra space at end of each line if there is one</p>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 2. Remove second value of each line</p>            
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 3. Save as text file</p>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
 
     <br>
     <h2 style="text-align: center; font-size: 30px; color:rgb(198, 237, 255)">Exoplanet Data</h2>
+    <div style="width: 90%;">
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"><strong>Data Source</strong>: <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS" style="color: pink;">NASA Exoplanet archive</a> do not download all columns, steps on what to download stated below.</p>
+            <br>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> <strong>PreProcessing</strong>:</p>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 1. View and download only HIP ID and Number of Planets columns by selecting them in "Select Columns"</p>
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;"> 2. Remove duplicate HIP IDs</p>            
+        </div>
+        <div style="clear: both;"></div> <!-- Clear the float -->
+    </div>
+
 
     </body>
 </body>
