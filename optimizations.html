@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shining Star</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: rgb(13, 21, 40);
+            text-align: center;
+            align-items: center;
+            color:white;
+            padding: 30px; /* Optional padding to provide space between content and border */
+        }
+
+        h1, h3 {
+            color: white;
+        }
+
+        .horizontal-line {
+            width: 100%;
+            height: 3px; /* Adjust the height of the line */
+            background-color: white; /* Change the color of the line */
+            margin-top: 40px; /* Adjust the margin from the top */
+            margin-bottom: 40px; /* Adjust the margin from the bottom */
+        }
+
+        button {
+            background-color: #e9c1ee; 
+            border: none;
+            color: rgb(13, 21, 40);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 8px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect */
+        button:hover {
+            background-color: #ad1aa3; /* Darker green */
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1 style="text-align: center; font-size: 45px; color:rgb(160, 212, 255)">Shining Star</h1>
+    <br>
+
+    <a href="index.html"><button>About Shining Star</button></a>
+    <a href="data.html"><button>Data</button></a>
+    <a href="install.html"><button>Install and Run</button></a>
+    <a href="comments.html"><button>Comments</button></a>
+    <a href="optimizations.html"><button>Optimizations</button></a>
+
+    <div class="horizontal-line"></div>
+
+    <body>
+    <br>
+    <h2 style="text-align: center; font-size: 30px; color:rgb(198, 237, 255)">Optimizations</h2>
+    <div style="width: 90%;">
+        <div style="overflow: hidden;">
+            <p style="text-align: left; margin-left: 130px; margin-top: 10px;">
+                Initially building the application, I instantiated a sphere for each star that had a hip number or was within 25 light years from the sun. 
+                Due to the high number of game objects, the frames per second was very low. 
+                To increase the frame rate, I moved from using spheres to cubes to quads, which performed significantly better.
+                Since quads were used instantiate the stars in the application, billboarding was implemented to ensure that the stars always faced the camera. 
+                Although billboarding caused the frame rates to drop, my application still ran at ~30fps while showing ~100,000 stars and constellations.
+                <br><br>
+                The biggest optimization issue I ran into was getting the application to run at an acceptable frame rate when movement was introduced. 
+                With ~100,000 stars and movement of all the stars, the frame rate dropped to ~4fps. 
+                This low frame rate was unacceptable and I spent a few days researching how to increase the fps without having to decrease the number of stars shown. 
+                I came across a few solutions on YouTube but they were quite advanced for my level and I couldn't implement them in time. 
+                Unfortunately, I did have to decrease the number of stars shown in order to achieve an acceptable frame rate when the stars are moving.
+                The final application instantiates ~20,000 stars but runs at ~100fps when stars are not moving and ~35fps when stars are moving.
+                With that said, I still have a lot to learn regarding how to optimize applications with a lot of data.
+            </p>
+    </div>
+    <br>
+    <div style="float: left; margin-left: 160px;">
+        <img src="screenshot.png" alt="Shining Star Application" style="width: 800px; height: auto;">
+        <p style="font-size: 12px;">Shining Star Application</p>
+    </div>
+    <div style="clear: both;"></div> <!-- Clear the float -->
+    </body>
+</body>
+
+</html>
+
